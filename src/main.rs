@@ -3,6 +3,7 @@ use std::{
     io::{self, Write},
 };
 
+#[derive(Debug)]
 enum TransferError {
     InsufficientFunds,
     InvalidTransfer,
@@ -10,12 +11,14 @@ enum TransferError {
     InvalidAmount,
 }
 
+#[derive(Debug)]
 enum CreateWalletError {
     AccountAlreadyExists,
     NameTooShort,
     NameTooLong,
 }
 
+#[derive(Debug)]
 enum DeleteWalletError {
     AccountNotFound,
     NotEmpty,
